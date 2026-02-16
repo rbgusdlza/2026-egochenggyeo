@@ -14,13 +14,15 @@ import java.time.LocalDateTime;
 public abstract class BaseEntity {
 
     @CreatedDate
-    @Column(updatable = false)
+    @Column(name="created_date_time", updatable=false)
     private LocalDateTime createdDateTime;
 
     @LastModifiedDate
+    @Column(name="modified_date_time")
     private LocalDateTime modifiedDateTime;
 
     @Enumerated(EnumType.STRING)
+    @Column(name="status", nullable=false)
     private EntityStatus status = EntityStatus.ACTIVE;
 
     public void active() {
