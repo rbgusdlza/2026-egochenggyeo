@@ -11,6 +11,7 @@
 - 추천 핵심 로직은 반드시 `domain.recommendation`에 위치한다.
 - AI는 `domain` 내부 보조 역할만 허용한다(문구/이유 생성).
     - 금지: 점수 계산 / 날씨 판단 / 민감도 계산 / 스케줄링 제어
+- 테스트 코드 작성 시, given/when/then 구조를 유지한다.
 
 ## Non-goals (구현 금지)
 - 로그인/OAuth/JWT
